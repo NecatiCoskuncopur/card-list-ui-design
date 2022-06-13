@@ -1,5 +1,5 @@
 .api-search-form {
-  width: 720px;
+  max-width: 720px;
   margin: 0 auto 70px;
   position: relative;
   .icon {
@@ -11,12 +11,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    @media (max-width: 480px) {
+      height: 50px;
+    }
+
     svg {
       height: 34px;
       width: 34px;
+      @media (max-width: 480px) {
+        height: 24px;
+        width: 24px;
+      }
       path {
-        stroke: #8E97B6;;
+        stroke: #8e97b6;
       }
     }
   }
@@ -24,12 +31,17 @@
     width: 100%;
     height: 80px;
     border-radius: 40px;
-    border: 1px solid #DFE8ED;
+    border: 1px solid #dfe8ed;
     padding: 0 20px 0 90px;
-    color: #6B7289;
+    color: #6b7289;
     font-size: 18px;
-    &::placeholder{
-      color: #6B7289;
+    overflow: hidden;
+    &::placeholder {
+      color: #6b7289;
+    }
+    @media (max-width: 480px) {
+      height: 50px;
+      font-size: 14px;
     }
   }
 }
